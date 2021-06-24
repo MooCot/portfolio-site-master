@@ -1,0 +1,502 @@
+@import config
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	// header
+	.site-header
+		.top-text
+			display: none
+		
+		.navbar
+			.email-complex
+				display: none
+				margin-right: 10px
+			.brand-title
+				margin-left: 10px	
+		.header-composation			
+			.bottom-text
+				font-size: 30px
+				line-height: 30px
+			.button-block
+				display: flex
+				width: 100%
+				padding: 0
+				margin: 0
+				.transparent-neon
+					margin: 0 4%
+					width: 100%	
+					font-size: 14px
+					p
+						margin: 0
+
+	// header
+	// .s-web-services	
+	.s-web-services						
+		.block-services		
+			padding-right: 5%
+			padding-left: 5%
+			.service-card
+				.card-title
+					font-size: 18px
+				.card-descr
+					padding-right: 0
+
+		.button-block	
+			padding-right: 20% 
+			padding-left: 20%
+	.tooltip
+		&::before
+			bottom: 100%
+			left: 0				
+
+	// end .s-web-services		
+
+	// s-portfolio
+
+	.button-block	
+		padding-right: 25% 
+		padding-left: 25%
+
+	// end s-portfolio			
+
+	// s-calculator
+	.s-calculator	
+		.bilder-block	
+			padding: 1%
+		.part-block		
+			width: 100%	
+	// end s-calculator		
+
+	
+				
+
+
+
+// ≥992px
++media-breakpoint-down(md)
+
+	.comp-h	
+		.h2 
+			font-size: 30px
+
+	.navbar-links
+		display: none	
+		width: 100%
+		z-index: 2
+	.navbar-links.active	
+		display: flex
+	// header
+	.site-header
+		.navbar
+			.toggle-button
+				display: flex
+			.brand-title
+				margin-left: 20px
+				font-size: 38px
+			.email-complex
+				display: none
+			.navbar-links
+				position: relative
+				background-color: $main-bg
+				top: 140%
+				right: 10%
+				width: 100%
+				ul
+					flex-direction: column
+					width: 100%
+				li
+					text-align: center	
+					a
+						padding: 0
+		.header-composation
+			height: 70vh
+			.top-text
+				display: none
+				font-size: 26px		
+				line-height: 20px
+				margin: 0
+				margin-bottom: 5%
+			.bottom-text
+				font-size: 25px	
+				line-height: 30px
+				// line-height: 20px
+				margin: 0
+				margin-bottom: 5%
+			.logo-image
+				display: none
+				margin-top: 5%
+				width: 100%
+				padding: 0 30%
+			.button-block
+				margin: 0
+				.transparent-neon
+					margin: 0 2%
+					// width: 100%	
+					font-size: 18px
+					p
+						margin: 0
+
+		// end header	
+
+		// .s-web-services
+	.s-web-services
+		.block-services		
+			padding-right: 5%
+			padding-left: 5%
+			flex-direction: column
+			.service-card
+				margin-top: 3%
+		.button-block
+			flex-direction: column	
+			padding: 0 25%
+			padding-bottom: 5%
+			.neon
+				margin-top: 2%	
+
+		// end .s-web-services		
+
+		//.s-portfolio	
+	.s-portfolio	
+		.portfolio-block
+			padding-bottom: 5%
+			.portfolio-part		
+				padding-bottom: 2%
+				flex-direction: column	
+		.button-block
+			padding: 0 25%	
+			padding-bottom: 5%
+				
+		// end .s-portfolio	
+
+	// s-calculator
+	.s-calculator	
+		.comp-h
+			.h2
+				line-height: 40px
+		.bilder-block	
+			flex-direction: column	
+			.result-block	
+				width: 100%
+				.button-part
+					padding-right: 50%
+				.output-selector
+					width: 100%
+		.part-block
+			width: 100%
+			// justify-content: none
+
+	// s-calculator
+
+	// s-contacts
+	.s-contacts
+		.contact-block
+			padding-right: 5%
+			padding-left: 5%	
+			.text-block
+				.big-text
+					font-size: 25px
+					line-height: 40px
+		.form-block
+			.top-row		
+				flex-direction: column	
+			.bottom-row	
+				flex-direction: column	
+			.button-block
+				padding: 0
+				padding-right: 50%	
+
+
+
+	// s-contacts				
+
+	// footer
+	.main-footer
+		padding-left: 5% 	
+		padding-right: 5%	
+		.complex-footer
+			flex-direction: column	
+			.logo-colomn
+				width: 100%
+				.brand-title
+					display: block
+					text-align: center
+					width: 100%
+			.email-complex
+				width: 100%
+			.services-colomn
+				.h3
+					cursor: pointer
+				.block-service		
+					display: none
+				.block-service.active
+					display: block
+			.info-colomn
+				.h3
+					cursor: pointer
+				.block-info 
+					display: none
+				.block-info.active
+					display: block
+
+	// end footer		
+		
+
+// ≥768px
++media-breakpoint-down(sm)
+
+	// header
+
+
+	.site-header
+		.navbar
+			position: relative
+			width: 100%
+			flex-direction: column	
+			align-items: flex-start
+			.brand-title
+				margin-left: 20px
+				font-size: 38px
+				line-height: 75px
+			.email-complex
+				display: none
+			.navbar-links
+				position: none
+				top: 10%
+				right: 0
+				width: 100%
+				ul
+					flex-direction: column
+					width: 100%
+				li
+					text-align: center	
+					a
+						padding: .5rem 1rem
+		.header-composation
+			height: 70vh
+			.top-text
+				display: none
+			.bottom-text
+				font-size: 20px	
+				line-height: 30px
+				margin: 0
+				margin-bottom: 5%
+			.logo-image
+				margin-top: 5%
+				display: none
+				width: 100%
+				padding: 0 13%
+			.button-block
+				display: flex
+				width: 100%
+				padding: 0
+				margin: 0
+				.transparent-neon
+					margin: 0 2%
+					width: 100%	
+					font-size: 14px
+					p
+						margin: 0
+
+	// end header		
+		
+
+// ≥576px
++media-breakpoint-down(xs)
+
+	.comp-h	
+		.h2 
+			font-size: 30px
+
+		// header
+
+
+	.site-header
+		.navbar
+			position: relative
+			width: 100%
+			flex-direction: column	
+			align-items: flex-start
+			.brand-title
+				margin-left: 20px
+				font-size: 38px
+				line-height: 75px
+			.email-complex
+				display: none
+			.navbar-links
+				position: none
+				top: 10%
+				right: 0
+				width: 100%
+				ul
+					flex-direction: column
+					width: 100%
+				li
+					text-align: center	
+					a
+						padding: .5rem 1rem
+		.header-composation
+			height: 70vh
+			.top-text
+				display: none
+			.bottom-text
+				font-size: 20px	
+				line-height: 30px
+				margin: 0
+				margin-bottom: 5%
+			.logo-image
+				display: block
+				margin-top: 5%
+				width: 100%
+				padding: 0 10%
+			.button-block
+				display: flex
+				width: 100%
+				padding: 0
+				margin: 0
+				.transparent-neon
+					margin: 0 2%
+					width: 100%	
+					font-size: 14px
+					p
+						margin: 0
+
+		// end header	
+
+		// .s-web-services
+	.s-web-services
+		.block-services		
+			padding-right: 5%
+			padding-left: 5%
+			flex-direction: column
+			.service-card
+				margin-top: 3%
+		.button-block
+			flex-direction: column	
+			padding: 0 5%
+			padding-bottom: 5%
+			.neon
+				margin-top: 2%	
+	.tooltip
+		&::before
+			bottom: 100%
+			left: 0
+				
+
+		// end .s-web-services		
+
+		//.s-portfolio	
+	.s-portfolio	
+		.portfolio-block
+			padding-bottom: 5%
+			.portfolio-part		
+				padding-bottom: 2%
+				flex-direction: column	
+		.button-block
+			padding: 0 5%	
+			padding-bottom: 5%	
+		// end .s-portfolio	
+
+	// s-calculator
+	.s-calculator	
+		.comp-h
+			.h2
+				line-height: 40px
+		.bilder-block	
+			flex-direction: column	
+			.result-block	
+				width: 100%
+				.button-part
+					padding: 0	
+		.part-block
+			width: 100%			
+
+	.tooltip-calculator
+		&::before
+			bottom: 100%
+			left: 0		
+
+	// s-calculator
+
+	// s-contacts
+	.s-contacts
+		.contact-block
+			padding-right: 5%
+			padding-left: 5%	
+			.text-block
+				.big-text
+					font-size: 25px
+					line-height: 40px
+		.form-block
+			.top-row		
+				flex-direction: column	
+			.bottom-row	
+				flex-direction: column
+			.button-block
+				padding-right: 0
+	// end s-contacts								
+
+
+	// footer
+	.main-footer
+		padding-left: 5% 	
+		padding-right: 5%	
+		.complex-footer
+			flex-direction: column	
+			.logo-colomn
+				width: 100%
+				.brand-title
+					display: block
+					text-align: center
+					width: 100%
+			.email-complex
+				width: 100%
+			// .services-colomn
+				.block
+					height: 0
+			// .info-colomn
+
+	// end footer		
+		
+
+
+					
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+
+// ≤768px
++media-breakpoint-up(md)
+
+
+// ≤992px
++media-breakpoint-up(lg)
+
+	
+// ≤1200px
++media-breakpoint-up(xl)
+
+	// end web-services	
+	.s-web-services
+		.button-block
+			padding-right: 25%
+			padding-left: 25%
+	// end web-services
+
+	//.s-portfolio	
+	.s-portfolio			
+		.button-block
+			padding-right: 25%
+			padding-left: 25%
+	// end .s-portfolio	
+
+	// s-contacts	
+	.s-contacts		
+		.form-block
+			.button-block
+				padding-right: 60%	
+	// end s-contacts				
+	

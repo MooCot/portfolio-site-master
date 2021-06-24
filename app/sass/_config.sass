@@ -1,0 +1,400 @@
+// USER VARIABLES SECTION
+$fontsize: 16px // Body Font Size
+$textcolor-two: #ffffff // Text Color
+$accent: #0689c8
+$main-bg: #040814
+$textcolor-one: #000000
+$logo-one: #ffffff
+$logo-second: #b9e5fa
+$logo-third: #0689c8
+$emailcolor: #58c1f4
+$footercolor: #141e3b
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$gilroyregular: gilroyregular, sans-serif //  Font Family
+$gilroyextrabold: gilroyextrabold, sans-serif //  Font Family
+$gilroymedium: gilroymedium, sans-serif //  Font Family
+$gilroybold: gilroybold, sans-serif //  Font Family
+$gilroysemibold: gilroysemibold, sans-serif //  Font Family
+
+
+// Bootstrap compatible gutter variable => $gutter
+// $grid-gutter-width: 20px
+// $gutter: $grid-gutter-width
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@font-face 
+  font-family: 'finally_awake'
+  src:  url('../fonts/finally_awake.eot?b2nkrj')
+  src:  url('../fonts/finally_awake.eot?b2nkrj#iefix') format('embedded-opentype'), url('../fonts/finally_awake.ttf?b2nkrj') format('truetype'), url('../fonts/finally_awake.woff?b2nkrj') format('woff'), url('../fonts/finally_awake.svg?b2nkrj#finally_awake') format('svg')
+  font-weight: normal
+  font-style: normal
+  font-display: block
+
+
+[class^="icon-"], [class*=" icon-"] 
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'finally_awake' !important
+  speak: never
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.icon-square:before 
+  content: "\e907"
+
+.icon-dollar:before 
+  content: "\e900"
+
+.icon-instagram:before 
+  content: "\e901"
+
+.icon-vk:before 
+  content: "\e902"
+
+.icon-telegram:before 
+  content: "\e903"
+
+.icon-facebook:before 
+  content: "\e904"
+
+.icon-information:before 
+  content: "\e905"
+
+.icon-arrow_line_black:after 
+  content: "\e906"		
+
+
+
+@include font('gilroybold', normal, 400, '../fonts/Gilroy-Bold.woff2')
+@include font('gilroyextrabold', normal, 400, '../fonts/Gilroy-Extrabold.woff2')
+@include font('gilroymedium', normal, 400, '../fonts/Gilroy-Medium.woff2')
+@include font('gilroyregular', normal, 400, '../fonts/Gilroy-Regular.woff2')
+@include font('gilroysemibold', normal, 400, '../fonts/Gilroy-Semibold.woff2')
+
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $gilroyregular
+	font-size: $fontsize
+	width: 100%
+	height: 100%
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor-one
+	background: #000
+
+.s
+	&-web-services
+		min-height: 100%
+		color: $textcolor-one
+	&-contacts 
+		min-height: 100%
+		color: $textcolor-two
+		background: $main-bg
+	&-web-services
+		min-height: 100%
+		background-color: $main-bg
+		color: $textcolor-two
+	&-portfolio
+		min-height: 100%
+		color: $textcolor-two
+		background-color: $main-bg
+	&-calculator
+		min-height: 100%
+		background-color: $main-bg
+		color: $textcolor-one
+
+.line
+	height: 2px
+	background-color: $accent
+
+.logo-span-one
+	color: $logo-one
+.logo-span-two
+	color: $logo-second
+.logo-span-three
+	color: $logo-third
+
+.text
+	font-size: 14px
+
+span
+	color: $accent
+
+.h1
+	font-size: 38px
+
+.h2
+	text-align: center
+	font-size: 40px
+	color: $textcolor-one
+	font-family: $gilroyextrabold
+
+.h3
+	font-size: 24px
+	font-family: $gilroybold
+
+.transparent-neon
+	text-decoration: none
+	position: relative
+	display: inline-block
+	width: 190px
+	cursor: pointer
+	// width: 100%
+	height: 50px
+	text-align: center
+	line-height: 50px
+	color: $textcolor-two
+	letter-spacing: 1px
+	font-size: 16px
+	overflow: hidden
+	transform: 0.2s
+	border: 3px solid $accent
+	&:hover span:nth-child(1)
+		left: 100%
+		transition: 1s
+	&:hover span:nth-child(3)
+		right: 100%
+		transition: 1s	
+		transition-delay: 0.5s
+	&:hover span:nth-child(2)
+		top: 100%
+		transition: 1s	
+		transition-delay: 0.25s	
+	&:hover span:nth-child(4)
+		bottom: 100%
+		transition: 1s	
+		transition-delay: 0.75s	
+	&:hover
+		color: #ffffff
+		background: $accent
+		transition-delay: 1.25s
+	input
+		opacity: 0	
+	span
+		position: absolute
+		display: block
+		&:nth-child(1)
+			top: 0
+			left: -100%
+			width: 100%
+			height: 2px
+			background: linear-gradient(90deg, transparent, $accent)
+		&:nth-child(3)
+			bottom: 0
+			right: -100%
+			width: 100%
+			height: 2px
+			background: linear-gradient(270deg, transparent, $accent)	
+		&:nth-child(2)
+			top: -100%
+			right: 0
+			width: 2px
+			height: 100%
+			background: linear-gradient(180deg, transparent, $accent)	
+		&:nth-child(4)
+			bottom: -100%
+			left: 0
+			width: 2px
+			height: 100%
+			background: linear-gradient(360deg, transparent, $accent)		
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+input 
+	outline: none		
+	border: none
+	background: transparent
+
+textarea	
+	outline: none		
+	border: none
+
+
+.neon
+	text-decoration: none
+	position: relative
+	display: inline-block
+	width: 100%
+	cursor: pointer
+	height: 50px
+	text-align: left
+	padding-right: 1% 
+	padding-left: 1%
+	line-height: 50px
+	color: $accent
+	letter-spacing: 1px
+	font-size: 16px
+	overflow: hidden
+	transform: 0.2s
+	border: 1px solid $accent
+	&:hover span:nth-child(1)
+		left: 100%
+		transition: 1s
+	&:hover span:nth-child(3)
+		right: 100%
+		transition: 1s	
+		transition-delay: 0.5s
+	&:hover span:nth-child(2)
+		top: 100%
+		transition: 1s	
+		transition-delay: 0.25s	
+	&:hover span:nth-child(4)
+		bottom: 100%
+		transition: 1s	
+		transition-delay: 0.75s	
+	&:hover
+		color: #ffffff
+		background: $accent
+		transition-delay: 1.25s
+	input
+		color: #fff
+		width: 80%
+		height: 100%
+		text-align: left
+		font-family: $gilroysemibold
+	.complex
+		display: flex	
+		height: 100%
+		p
+			text-align: left
+			width: 20%
+			height: 100%
+			display: block
+			margin: 0
+			padding: 0
+			font-size: 34px
+			line-height: 50px
+			&::after
+				width: 100%
+	span
+		position: absolute
+		display: block
+		&:nth-child(1)
+			top: 0
+			left: -100%
+			width: 100%
+			height: 2px
+			background: linear-gradient(90deg, transparent, $accent)
+		&:nth-child(3)
+			bottom: 0
+			right: -100%
+			width: 100%
+			height: 2px
+			background: linear-gradient(270deg, transparent, $accent)	
+		&:nth-child(2)
+			top: -100%
+			right: 0
+			width: 2px
+			height: 100%
+			background: linear-gradient(180deg, transparent, $accent)	
+		&:nth-child(4)
+			bottom: -100%
+			left: 0
+			width: 2px
+			height: 100%
+			background: linear-gradient(360deg, transparent, $accent)			
+
+.tooltip
+	position: relative
+	cursor: pointer
+	&::before
+		display: block
+		content: attr(data-title)
+		width: 200px
+		font-size: 14px
+		line-height: 15px
+		background-color: rgba(0, 0, 0, .85)
+		border-radius: 10px
+		position: absolute
+		bottom: -100%
+		left: 160%
+		z-index: 1
+		color: #fff
+		padding: 10px
+		opacity: 0
+		visibility: hidden
+		box-sizing: border-box
+	&:hover::before
+		visibility: visible
+		opacity: 1				
+
+.tooltip-calculator
+	position: relative
+	cursor: pointer
+	color: #fff
+	&::before
+		display: block
+		content: attr(data-title)
+		width: 200px
+		font-size: 14px
+		line-height: 15px
+		background-color: rgba(0, 0, 0, .85)
+		border-radius: 10px
+		position: absolute
+		bottom: -100%
+		left: 100%
+		z-index: 1
+		color: #fff
+		// margin-left: 100px
+		padding: 10px
+		opacity: 0
+		visibility: hidden
+		box-sizing: border-box
+	&:hover::before
+		visibility: visible
+		opacity: 1				
+
+
+
+
